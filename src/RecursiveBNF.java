@@ -5,7 +5,6 @@ import java.util.Scanner;
  * BNF: Programming assignment # 2:
  * Generating and evaluate expression tree from given input string following provided BNF.
  * Student Name: Rimpalbahen Suthar
- * NJIT ID: 31481275
  * <p>
  * BNF:
  * <expression>  ::=  <factor>  * <expression>   |   <factor>  /  <expression>   |   <factor>
@@ -57,7 +56,7 @@ class RecursiveBNF {
             expressionTree.setRoot(token);
             expressionTree.setLeftNode(newFactorTree);
             expressionTree.setRightNode(expressionToTree);
-            System.out.println("The ROOT of expression tree is: " + token.toString());
+            System.out.println("The ROOT of expression tree is: " + token);
             System.out.println("The left node of expression is: " + expressionTree.getLeftNode().toString());
             System.out.println("The right node of expression is: " + expressionTree.getRightNode().toString());
             //the expression tree representation starts from end to top, the root node will be the last node printed.
@@ -80,7 +79,7 @@ class RecursiveBNF {
             termTree.setRoot(token);
             termTree.setLeftNode(factorTree);
             termTree.setRightNode(termToTree);
-            System.out.println("The ROOT of factor tree is: " + token.toString());
+            System.out.println("The ROOT of factor tree is: " + token);
             System.out.println("The left node of factor is: " + termTree.getLeftNode().toString());
             System.out.println("The right node of factor is: " + termTree.getRightNode().toString());
             //the expression tree representation starts from end to top, the root node will be the last node printed.
